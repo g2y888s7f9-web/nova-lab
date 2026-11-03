@@ -1,3 +1,4 @@
+
 name: Build Nova APK
 
 on:
@@ -8,12 +9,10 @@ on:
 permissions:
   contents: read
 
-env:
-  ANDROID_HOME: ${{ runner.temp }}/android-sdk
-
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout source
         uses: actions/checkout@v4
