@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#0B1220" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="18dp">
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical" android:paddingBottom="18dp">
+            <TextView android:layout_width="48dp" android:layout_height="48dp" android:gravity="center"
+                android:text="N" android:textColor="#FFFFFF" android:textStyle="bold" android:textSize="26sp"
+                android:background="@drawable/nova_logo_bg" />
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:orientation="vertical" android:paddingStart="12dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="NOVA"
+                    android:textColor="#F8FAFC" android:textSize="23sp" android:textStyle="bold" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Advanced Lab Intelligence • v3.0"
+                    android:textColor="#94A3B8" android:textSize="12sp" />
+            </LinearLayout>
+            <TextView android:id="@+id/txtOnline" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="● READY" android:textColor="#6EE7B7" android:textSize="11sp" android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical"
+            android:padding="16dp" android:background="@drawable/nova_card" android:layout_marginBottom="14dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="DEVICE INTELLIGENCE"
+                android:textColor="#38BDF8" android:textSize="11sp" android:textStyle="bold" />
+            <TextView android:id="@+id/txtDevice" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="Android device" android:textColor="#F8FAFC" android:textSize="22sp" android:textStyle="bold" android:paddingTop="6dp" />
+            <TextView android:id="@+id/txtDeviceSub" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="Model • Android version • SDK" android:textColor="#94A3B8" android:textSize="13sp" android:paddingTop="3dp" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingTop="16dp">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:text="BATTERY" android:textColor="#94A3B8" android:textSize="10sp" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <TextView android:id="@+id/txtBattery" android:text="--%" android:textColor="#6EE7B7" android:textSize="23sp" android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:text="FREE STORAGE" android:textColor="#94A3B8" android:textSize="10sp" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <TextView android:id="@+id/txtStorage" android:text="-- GB" android:textColor="#7DD3FC" android:textSize="23sp" android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="CLOUD COMMAND CENTER"
+            android:textColor="#E2E8F0" android:textSize="15sp" android:textStyle="bold" android:paddingBottom="8dp" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical"
+            android:padding="14dp" android:background="@drawable/nova_card" android:layout_marginBottom="14dp">
+            <EditText android:id="@+id/edtServer" android:layout_width="match_parent" android:layout_height="48dp"
+                android:hint="HTTPS server URL" android:singleLine="true" android:inputType="textUri"
+                android:textColor="#F8FAFC" android:textColorHint="#64748B" android:backgroundTint="#38BDF8" />
+            <EditText android:id="@+id/edtToken" android:layout_width="match_parent" android:layout_height="48dp"
+                android:hint="Lab device token" android:singleLine="true" android:inputType="textPassword"
+                android:textColor="#F8FAFC" android:textColorHint="#64748B" android:backgroundTint="#38BDF8" />
+            <CheckBox android:id="@+id/chkConsent" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:buttonTint="#38BDF8" android:text="I agree to send the listed technical lab telemetry. I can revoke consent anytime."
+                android:textColor="#CBD5E1" android:textSize="12sp" />
+            <Button android:id="@+id/btnSave" android:layout_width="match_parent" android:layout_height="48dp"
+                android:text="SAVE CONFIGURATION" android:textAllCaps="false" />
+            <Button android:id="@+id/btnSend" android:layout_width="match_parent" android:layout_height="48dp"
+                android:text="SYNC NOW  ↑" android:textAllCaps="false" />
+            <Button android:id="@+id/btnStop" android:layout_width="match_parent" android:layout_height="48dp"
+                android:text="REVOKE CONSENT &amp; STOP" android:textAllCaps="false" />
+            <TextView android:id="@+id/txtStatus" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="Status: not configured" android:textColor="#6EE7B7" android:textSize="12sp" android:paddingTop="8dp" />
+        </LinearLayout>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SECURITY &amp; DIAGNOSTICS"
+            android:textColor="#E2E8F0" android:textSize="15sp" android:textStyle="bold" android:paddingBottom="8dp" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical"
+            android:padding="14dp" android:background="@drawable/nova_card" android:layout_marginBottom="14dp">
+            <TextView android:text="Device Intelligence" android:textColor="#F8FAFC" android:textStyle="bold" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            <TextView android:id="@+id/txtModuleInfo" android:text="Hardware • Memory • Storage • Network • Sensors" android:textColor="#94A3B8" android:textSize="12sp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingTop="4dp" />
+            <Button android:id="@+id/btnPreview" android:layout_width="match_parent" android:layout_height="46dp" android:text="VIEW TELEMETRY PREVIEW" android:textAllCaps="false" />
+            <Button android:id="@+id/btnPermissions" android:layout_width="match_parent" android:layout_height="46dp" android:text="SPECIAL ACCESS AUDIT" android:textAllCaps="false" />
+            <Button android:id="@+id/btnCommsLab" android:layout_width="match_parent" android:layout_height="46dp" android:text="OPEN COMMUNICATIONS SIMULATOR" android:textAllCaps="false" />
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#26364D" android:layout_marginTop="10dp" android:layout_marginBottom="10dp" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="LOCATION LAB • ONE-TIME CAPTURE" android:textColor="#38BDF8" android:textStyle="bold" android:textSize="11sp" />
+            <CheckBox android:id="@+id/chkLocationUpload" android:layout_width="match_parent" android:layout_height="wrap_content" android:buttonTint="#38BDF8" android:text="I separately agree to send one location sample to my lab server." android:textColor="#CBD5E1" android:textSize="12sp" />
+            <Button android:id="@+id/btnCaptureLocation" android:layout_width="match_parent" android:layout_height="46dp" android:text="CAPTURE &amp; SEND LOCATION ONCE" android:textAllCaps="false" />
+        </LinearLayout>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ACTIVITY / EVIDENCE"
+            android:textColor="#E2E8F0" android:textSize="15sp" android:textStyle="bold" android:paddingBottom="8dp" />
+        <TextView android:id="@+id/txtPreview" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Telemetry preview and lab events will appear here." android:textColor="#CBD5E1" android:textSize="12sp"
+            android:background="@drawable/nova_card" android:padding="14dp" android:textIsSelectable="true" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Privacy: Nova excludes SMS, OTP, call logs, contacts, microphone/camera content, clipboard contents, keystrokes and shell commands. Location is a separate, user-triggered one-time lab sample and is cleared after successful upload. Communications use synthetic records only."
+            android:textColor="#64748B" android:textSize="11sp" android:paddingTop="14dp" android:paddingBottom="18dp" />
+    </LinearLayout>
+</ScrollView>
